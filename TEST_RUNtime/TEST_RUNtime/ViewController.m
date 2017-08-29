@@ -56,12 +56,19 @@
     
     //移除空元素
     [arry removeObject:nil];
-    */
+    
     NSLog(@"-----+%s",__func__);
     NSLog(@"-----+%s",__FUNCTION__);
     //移除越界元素
     [arry removeObjectAtIndex:1000];
+    */
     
+    NSString *str = nil;
+    NSDictionary *dic =@{
+                         @"key":str
+                         };
+    
+    NSLog(@"%@",dic);
     
 }
 

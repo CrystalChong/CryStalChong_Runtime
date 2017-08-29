@@ -16,6 +16,8 @@
 		1B6D75451F54FE2A00A1C144 /* TEST_RUNtimeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6D75441F54FE2A00A1C144 /* TEST_RUNtimeTests.m */; };
 		1B6D75501F54FE2A00A1C144 /* TEST_RUNtimeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6D754F1F54FE2A00A1C144 /* TEST_RUNtimeUITests.m */; };
 		1B6D75641F55079B00A1C144 /* NSMutableArray+ChongRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6D75631F55079B00A1C144 /* NSMutableArray+ChongRuntime.m */; };
+		1B764E221F553AC70000F32F /* NSMutableDictionary+ChongRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B764E211F553AC70000F32F /* NSMutableDictionary+ChongRuntime.m */; };
+		1B764E251F553DFA0000F32F /* NSDictionary+ChongRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B764E241F553DFA0000F32F /* NSDictionary+ChongRuntime.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		1B6D75511F54FE2A00A1C144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B6D75621F55079B00A1C144 /* NSMutableArray+ChongRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+ChongRuntime.h"; sourceTree = "<group>"; };
 		1B6D75631F55079B00A1C144 /* NSMutableArray+ChongRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+ChongRuntime.m"; sourceTree = "<group>"; };
+		1B764E201F553AC70000F32F /* NSMutableDictionary+ChongRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+ChongRuntime.h"; sourceTree = "<group>"; };
+		1B764E211F553AC70000F32F /* NSMutableDictionary+ChongRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+ChongRuntime.m"; sourceTree = "<group>"; };
+		1B764E231F553DFA0000F32F /* NSDictionary+ChongRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+ChongRuntime.h"; sourceTree = "<group>"; };
+		1B764E241F553DFA0000F32F /* NSDictionary+ChongRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+ChongRuntime.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,10 @@
 			children = (
 				1B6D75621F55079B00A1C144 /* NSMutableArray+ChongRuntime.h */,
 				1B6D75631F55079B00A1C144 /* NSMutableArray+ChongRuntime.m */,
+				1B764E201F553AC70000F32F /* NSMutableDictionary+ChongRuntime.h */,
+				1B764E211F553AC70000F32F /* NSMutableDictionary+ChongRuntime.m */,
+				1B764E231F553DFA0000F32F /* NSDictionary+ChongRuntime.h */,
+				1B764E241F553DFA0000F32F /* NSDictionary+ChongRuntime.m */,
 			);
 			path = "类目";
 			sourceTree = "<group>";
@@ -292,7 +302,9 @@
 				1B6D75641F55079B00A1C144 /* NSMutableArray+ChongRuntime.m in Sources */,
 				1B6D75321F54FE2A00A1C144 /* ViewController.m in Sources */,
 				1B6D752F1F54FE2A00A1C144 /* AppDelegate.m in Sources */,
+				1B764E221F553AC70000F32F /* NSMutableDictionary+ChongRuntime.m in Sources */,
 				1B6D752C1F54FE2A00A1C144 /* main.m in Sources */,
+				1B764E251F553DFA0000F32F /* NSDictionary+ChongRuntime.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -532,6 +544,7 @@
 				1B6D75561F54FE2A00A1C144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B6D75571F54FE2A00A1C144 /* Build configuration list for PBXNativeTarget "TEST_RUNtimeTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +553,7 @@
 				1B6D75591F54FE2A00A1C144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1B6D755A1F54FE2A00A1C144 /* Build configuration list for PBXNativeTarget "TEST_RUNtimeUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +562,7 @@
 				1B6D755C1F54FE2A00A1C144 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
