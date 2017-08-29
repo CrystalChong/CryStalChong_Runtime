@@ -15,7 +15,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         //数组越界问题
-        
+        /*
         Method method1 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(objectAtIndex:));
         Method method2 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(_safeObjectAtIndex:));
         method_exchangeImplementations(method1, method2);
@@ -36,10 +36,7 @@
     });
     
     
-    
-    Method method1 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(objectAtIndex:));
-    Method method2 = class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(_safeObjectAtIndex:));
-    method_exchangeImplementations(method1, method2);
+
 }
 /*
  //%li 长整型   ==%ld   %i = %d   整形;
