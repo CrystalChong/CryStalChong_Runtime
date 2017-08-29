@@ -1,0 +1,2 @@
+# CryStalChong_Runtime
+程序中运用runtime解决部分程序崩溃问题
