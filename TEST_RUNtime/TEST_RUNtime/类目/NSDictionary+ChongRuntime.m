@@ -14,8 +14,25 @@
     dispatch_once(&onceToken, ^{
         //字典赋值为nil 不Crash
         method_exchangeImplementations(class_getInstanceMethod(NSClassFromString(@"__NSPlaceholderDictionary"), @selector(initWithObjects:forKeys:count:)), class_getInstanceMethod(NSClassFromString(@"__NSPlaceholderDictionary"), @selector(_safeinitWithobject:forKey:count:)));
-        
+        method_exchangeImplementations(class_getInstanceMethod(NSClassFromString(@"__NSPlaceholderDictionary"), @selector(objectForKey:)), class_getInstanceMethod(NSClassFromString(@"__NSPlaceholderDictionary"), @selector(_satfeObjectForKey:)));
     });
+}
+- (id)_satfeObjectForKey:(NSString *)key{
+    NSArray *array = [self allKeys];
+    NSInteger a = 0;
+    for(NSString *str in array){
+        if ([key isEqualToString:str]) {
+            a=1;
+        }
+    }
+    if (a==1) {
+        NSLog(@"阿斯顿发送到发送到发送到发生大法师");
+       return  [self _satfeObjectForKey:key];
+    }else{
+         NSLog(@"阿斯顿发送到发送到发送到发生大法师");
+        return @"asdafs";
+    }
+//    return [self _satfeObjectForKey:key];
 }
 - (instancetype)_safeinitWithobject:(const id  _Nonnull __unsafe_unretained *)objects forKey:(const id<NSCopying>  _Nonnull __unsafe_unretained *)keys count:(NSInteger)count{
     
@@ -30,19 +47,15 @@
         
         NSInteger index = 0;
         for (int a=0; a<count; a++) {
-            
             if (objects[a]!=nil&&keys[a]!=nil) {
-                
                 objectsNew[index] = objects[a];
                 keysNew[index] = keys[a];
                 index++;
             }
         }
         values = [self _safeinitWithobject:objectsNew forKey:keysNew count:index];
-        
     } @finally {
         return values;
     }
-    
 }
 @end

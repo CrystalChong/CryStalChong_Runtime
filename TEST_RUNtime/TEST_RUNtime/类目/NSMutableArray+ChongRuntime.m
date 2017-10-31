@@ -26,17 +26,21 @@
         
         //添加空元素;
         method_exchangeImplementations(class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(addObject:)), class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(_safeAddObject:)));
-        
         //删除越界问题
         method_exchangeImplementations(class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(removeObjectAtIndex:)), class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(_safeRemoveObjectAtIndex:)));
         
         //删除空元素
         method_exchangeImplementations(class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(removeObject:)), class_getInstanceMethod(NSClassFromString(@"__NSArrayM"), @selector(_safeRemoveObjec:)));
-        
-    });
-    
-    
 
+        method_exchangeImplementations(class_getClassMethod(NSClassFromString(@"__NSArrayM"), @selector(arrayWithArray:)), class_getClassMethod(NSClassFromString(@"__NSArrayM"), @selector(_safeArrWithArray:)));
+    });
+}
++ (instancetype)_safeArrWithArray:(NSArray *)arr{
+    if (arr.count==0) {
+        NSLog(@"数组内容为空");
+        return [NSMutableArray array];
+    }
+    return [NSMutableArray _safeArrWithArray:arr];
 }
 /*
  //%li 长整型   ==%ld   %i = %d   整形;
@@ -69,7 +73,7 @@
 //移除元素越界
 - (void)_safeRemoveObjectAtIndex:(NSInteger)index{
     
-    if (self.count<index) {
+    if (self.count<=index) {
         NSLog(@"Warning from %s:sorry can't Remove object at index, beyond the scope",__func__);
     }else{
         [self _safeRemoveObjectAtIndex:index];
