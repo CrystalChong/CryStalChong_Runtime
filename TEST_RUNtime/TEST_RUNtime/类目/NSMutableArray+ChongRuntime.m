@@ -37,7 +37,7 @@
 }
 + (instancetype)_safeArrWithArray:(NSArray *)arr{
     if (arr.count==0) {
-        NSLog(@"数组内容为空");
+        NSLog(@"chongRuntime--数组内容为空%s",__FUNCTION__);
         return [NSMutableArray array];
     }
     return [NSMutableArray _safeArrWithArray:arr];
